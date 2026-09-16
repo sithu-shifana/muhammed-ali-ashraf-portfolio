@@ -20,7 +20,7 @@ export const assets = {
   heroScene: {
     bg: { src: "/images/hero-bg-moon.png", alt: "Glowing moon and cosmic sky" },
     subject: {
-      src: "/images/hero-bust-cutout.png",
+      src: "https://res.cloudinary.com/dvrvdijpf/image/upload/v1789550621/hero-bust-cutout.png",
       alt: "Muhammed Ali Ashraf holding cards in a black suit",
     },
   },

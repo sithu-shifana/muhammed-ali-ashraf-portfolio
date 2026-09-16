@@ -313,7 +313,7 @@ export function Hero({ ready }: { ready: boolean }) {
               className="relative h-full w-auto"
             >
               <Image
-                src="/images/hero-bust-cutout.png"
+                src="https://res.cloudinary.com/dvrvdijpf/image/upload/v1789550621/hero-bust-cutout.png"
                 alt="Muhammed Ali Ashraf holding tarot cards"
                 width={860}
                 height={781}
