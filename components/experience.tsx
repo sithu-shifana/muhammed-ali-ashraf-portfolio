@@ -8,8 +8,6 @@ import { SoundProvider } from "@/components/sound-provider"
 import { Hero } from "@/components/sections/hero"
 import { About } from "@/components/sections/about"
 import { Disciplines } from "@/components/sections/disciplines"
-import { Experience as ExperienceSection } from "@/components/sections/experience"
-import { Performances } from "@/components/sections/performances"
 import { Gallery } from "@/components/sections/gallery"
 import { Quote } from "@/components/sections/quote"
 import { FinalCta } from "@/components/sections/final-cta"
@@ -44,8 +42,6 @@ export function Experience() {
           <About />
           <Disciplines />
           <Quote>The mind sees only what it is guided to believe.</Quote>
-          <ExperienceSection />
-          <Performances />
           <Gallery />
           <FinalCta />
           <Footer />

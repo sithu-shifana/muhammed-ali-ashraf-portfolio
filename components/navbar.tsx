@@ -8,7 +8,6 @@ import { contact } from "@/lib/assets"
 const LINKS = [
   { label: "About", href: "#about" },
   { label: "Disciplines", href: "#disciplines" },
-  { label: "Experience", href: "#experience" },
   { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ]
