@@ -1,0 +1,103 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Cinematic esoteric palette */
+  --color-ink: var(--ink);
+  --color-navy: var(--navy);
+  --color-indigo: var(--indigo);
+  --color-plum: var(--plum);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-mist: var(--mist);
+  --color-mist-dim: var(--mist-dim);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-display: var(--font-cinzel), Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+
+  --ink: #050409;
+  --navy: #090815;
+  --indigo: #121029;
+  --plum: #1a1230;
+  --gold: #d4af37;
+  --gold-soft: #f5e1a4;
+  --mist: #f0edf6;
+  --mist-dim: #9b98b0;
+
+  --background: #050409;
+  --foreground: #f0edf6;
+  --border: rgba(212, 175, 55, 0.22);
+
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: rgba(212, 175, 55, 0.35);
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(180deg, #fcedc5 0%, #d4af37 60%, #94711a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-mystic {
+    background: linear-gradient(135deg, #ffffff 0%, #dcd6f7 50%, #c4b5fd 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .tracking-luxe {
+    letter-spacing: 0.18em;
+  }
+  .tracking-wide-sm {
+    letter-spacing: 0.12em;
+  }
+}
+
+/* Vignette helpers */
+.cinematic-vignette::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(120% 90% at 50% 40%, transparent 45%, rgba(5, 4, 9, 0.75) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
